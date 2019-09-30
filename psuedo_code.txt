@@ -1,0 +1,31 @@
+
+ Create a call to action page to "start Quiz"
+    create responsive theme
+    button element
+
+ Create navigation options to
+    view high scores
+    view the time, value set to 0
+
+ create button to start the quiz
+    on click timer is set to a time and begins counting down
+    user is presented wth a series of questions
+
+ Calculate score based on time remaining and correct answers
+ wrong answer results in a penalty e.g subtract 15 seconds from the time remaining
+
+ when time runs out or when all questions are answered the user is presented with a final score and asked to enter
+ their initials
+
+ The score and initials are stored in local storage
+
+ Application needs to be responsive
+
+ Requirements:
+ Need a README for quiz instructions
+ First View displays a button to start the quiz
+
+ Bonus add audio file to alert an incorrect answer
+ custom theme
+ multiple quizzes
+ add to your portfolio
