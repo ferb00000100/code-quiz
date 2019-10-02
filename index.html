@@ -17,6 +17,7 @@
 
 	<div class="d-flex justify-content-center my-5">
 		<div class="card" style="width: 18rem;">
+			<div class="d-flex" id="timer"></div>
 <!--			<img class="card-img-top" src="#" alt="Card image cap">-->
 			<div class="card-body" id="begin">
 				<h5 class="card-title">Code Quiz</h5>
@@ -27,38 +28,21 @@
 			</div>
 
 			<div class="card" style="width: 18rem;">
-				<div class="card-body" id="q1">
-					<h5 class="card-title">Question One</h5>
+				<div class="card-body" id="qWindow">
+					<h5 class="card-title">Question</h5>
 					<p class="card-text" id="question"></p>
 					<div class="row ml-3">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" name="checkbox" id="answerStrings" value=''
-							       unchecked>
-							<label class="form-check-label" for="answerStrings">Strings</label>
-						</div>
+						<button  id="choice1" class="btn btn-primary mb-2"></button>
 					</div>
 					<div class="row ml-3">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" name="checkbox" id="answerBooleans"
-							       value='' unchecked>
-							<label class="form-check-label" for="answerBooleans">Booleans</label>
-						</div>
+						<button  id="choice2" class="btn btn-primary mb-2"></button>
 					</div>
 					<div class="row ml-3">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" name="checkbox" id="answerAlerts" value=''  unchecked>
-							<label class="form-check-label" for="answerAlerts">Alerts</label>
-						</div>
+						<button  id="choice3" class="btn btn-primary mb-2"></button>
 					</div>
-
 					<div class="row ml-3  mb-4">
-						<div class="form-check">
-							<input class="form-check-input" type="checkbox" name="checkbox" id="answerNumbers" value=''  unchecked>
-							<label class="form-check-label" for="answerNumbers">Numbers</label>
-						</div>
+						<button  id="choice4" class="btn btn-primary mb-2"></button>
 					</div>
-					<a id="submitQ" 1class="btn btn-primary">Submit</a>
-
 				</div>
 			</div>
 
@@ -70,9 +54,6 @@
 <!--			</div>-->
 		</div>
 	</div>
-
-
-
 </div>
 
 	<script src="./script.js"></script>
