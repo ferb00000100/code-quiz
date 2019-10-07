@@ -46,8 +46,16 @@ function setTime() {
 			document.getElementById("qWindow").style.display = "none";
 			clearInterval(timerInterval);
 		}
+		if (secondsLeft <= 0 ){
+			secondsLeft = 1;
+			var btn=document.createElement("BUTTON");
+			btn.textContent = "Finished"
+			end.appendChild(btn);
+			document.getElementById("end").style.display = "block";
+		}
 
 	}, 1000);
+
 }
 
 function getLeaders() {
@@ -65,10 +73,6 @@ function getLeaders() {
 		li.textContent = "Leader " + leaders[i].initials + " Score " +leaders[i].score;
 		li.setAttribute("data-index", i);
 		displayLeaders.appendChild(li);
-		// console.log("leader " + leaders[i].initials);
-		// displayLeaders.innerHTML = "Leader " + leaders[i].initials + " Score " +leaders[i].score;
-		// console.log(leaders[i].initials);
-		// console.log(leaders[i].score);
 	}
 }
 
@@ -102,8 +106,6 @@ function displayQuestions(i) {
 function checkAnswers(i, initials){
 	var score = 0;
 	console.log("i is " + i);
-	// console.log("question for " + i + " is " + questions[i].answer);
-	// console.log("event target is " + event.target.textContent);
 	console.log(questions.length);
 	length = questions.length - 1;
 			questionWindow.addEventListener("click", function (event) {
@@ -121,10 +123,6 @@ function checkAnswers(i, initials){
 					else {
 						storeScore(initials, score);
 						secondsLeft = 1;
-						var btn=document.createElement("BUTTON");
-						btn.textContent = "Finished"
-						end.appendChild(btn);
-						document.getElementById("end").style.display = "block";
 					}
 				}
 				else {
@@ -136,11 +134,6 @@ function checkAnswers(i, initials){
 					else {
 						storeScore(initials, score);
 						secondsLeft = 1;
-						var btn=document.createElement("BUTTON");
-						btn.textContent = "Finished"
-						end.appendChild(btn);
-						document.getElementById("end").style.display = "block";
-
 					}
 				}
 			});
